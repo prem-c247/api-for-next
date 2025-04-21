@@ -22,8 +22,6 @@ class PostController extends Controller
     {
         try {
             $user = \App\Models\User::find(1);
-            //$user->assignRole('admin');
-            // dd($user->getAllPermissions()->pluck('name'));
             $posts = $this->postService->index();
             return response()->json(['data' => $posts], 200);
         } catch (Exception $e) {
