@@ -21,13 +21,8 @@ class ProfileController extends Controller
     public function profile()
     {
         try {
-            if(1==1){
-                if(2==2){
-                    $user = $this->profileService->profile();
-                    return response()->json(['data' => $user], 200);
-                }
-            }
-            
+            $user = $this->profileService->profile();
+            return response()->json(['data' => $user], 200);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 500);
         }
