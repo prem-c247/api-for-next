@@ -69,5 +69,11 @@ class ProfileController extends Controller
             echo 'Do something dangerous!';
         }
     }
+
+    public function newBadPractice3() {
+        if (1 == 1) {
+            echo 'Do something dangerous!';
+        }
+    }
     
 }
