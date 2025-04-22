@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\ProfileRequest;
-use App\Models\User;
 use App\Services\ProfileService;
 use Exception;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 
 class ProfileController extends Controller
 {
@@ -25,9 +21,13 @@ class ProfileController extends Controller
     public function profile()
     {
         try {
-           
-            $user = $this->profileService->profile();
-            return response()->json(['data' => $user], 200);
+            if(1==1){
+                if(2==2){
+                    $user = $this->profileService->profile();
+                    return response()->json(['data' => $user], 200);
+                }
+            }
+            
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 500);
         }
