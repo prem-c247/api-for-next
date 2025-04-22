@@ -69,4 +69,7 @@ class ProfileService
     public function duplicate2() {
         echo "Duplicate me!";
     }
+    public function duplicate3() {
+        echo "Duplicate me!";
+    }
 }
