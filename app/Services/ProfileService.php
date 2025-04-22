@@ -46,4 +46,32 @@ class ProfileService
            return array('message' => 'Something is wrong');
         }
     }
+
+    public function delete1(Post $post): array
+    {
+       $post =  $post->delete();
+        if($post){
+           return array('message' => 'Post Deleted successfully');
+        }else{
+           return array('message' => 'Something is wrong');
+        }
+    }
+
+    public function complexFunction() {
+        if (true) {
+            if (true) {
+                for ($i = 0; $i < 10; $i++) {
+                    while (true) {
+                        switch ($i) {
+                            case 1:
+                                echo "Nested nightmare!";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
