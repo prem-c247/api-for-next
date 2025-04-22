@@ -48,32 +48,5 @@ class ProfileController extends Controller
             return response()->json(['message' => $e->getMessage()], 500);
         }
     }
-    public function myTesting(){
-        if (true) {
-            if (true) {
-                if (true) {
-                    echo "This is bad";
-                }
-            }
-        }
-    }
-
-    public function badPractice() {
-        if (1 == 1) {
-            echo 'Do something dangerous!';
-        }
-    }
-
-    public function newBadPractice() {
-        if (1 == 1) {
-            echo 'Do something dangerous!';
-        }
-    }
-
-    public function newBadPractice3() {
-        if (1 == 1) {
-            echo 'Do something dangerous!';
-        }
-    }
     
 }
