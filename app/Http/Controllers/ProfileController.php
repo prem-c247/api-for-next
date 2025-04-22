@@ -53,5 +53,41 @@ class ProfileController extends Controller
             }
         }
     }
+
+    public function duplicate1() {
+        echo "Duplicate me!";
+    }
     
+    public function duplicate2() {
+        echo "Duplicate me!";
+    }
+    
+    public function complexFunction() {
+        if (true) {
+            if (true) {
+                for ($i = 0; $i < 10; $i++) {
+                    while (true) {
+                        switch ($i) {
+                            case 1:
+                                echo "Nested nightmare!";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public function badPractice() {
+        try {
+            throw new \Exception("Oops");
+        } catch (\Exception $e) {
+            // Nothing here
+        }
+        if (1 == 1) {
+            echo 'Do something dangerous!';
+        }
+    }
 }
