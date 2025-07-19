@@ -35,6 +35,7 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      * This is the again comment for checking the github action
+     * This is the again comment for checking the github action
      */
     public function store(PostRequest $request)
     {
