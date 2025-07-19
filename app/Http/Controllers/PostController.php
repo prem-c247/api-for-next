@@ -17,6 +17,7 @@ class PostController extends Controller
     }
     /**
      * Display a listing of the resource.
+     * This is the test comment for checking the workflow
      */
     public function index()
     {
