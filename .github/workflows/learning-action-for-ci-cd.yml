@@ -33,3 +33,14 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: php artisan test
+    # 👇 Simulate Deploy: Add below your build/test steps
+    - name: Simulate deployment (copy files)
+      run: |
+        mkdir -p /tmp/deploy
+        cp -r * /tmp/deploy
+        echo "Code has been 'deployed' to /tmp/deploy"
+
+    - name: Confirm simulation
+      run: ls -la /tmp/deploy
+
+
