@@ -55,7 +55,7 @@ class PostController extends Controller
     {
         try{
             $post = $this->postService->show($postId);
-            return response()->json(['data' => $post], 200);
+            return response()->json(['data' => $post, "message" => "Data send successfully"], 200);
         }catch(Exception $e){
             return response()->json(['error' => 'Post not found', 'message' => $e->getMessage()], 404);
         }
