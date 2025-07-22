@@ -46,4 +46,30 @@ class ProfileService
            return array('message' => 'Something is wrong');
         }
     }
+    public function delete1(Post $post): array
+    {
+       $post =  $post->delete();
+        if($post){
+           return array('message' => 'Post Deleted successfully');
+        }else{
+           return array('message' => 'Something is wrong');
+        }
+    }
+
+    public function badPractice() {
+        if (1 == 1) {
+            echo 'Do something dangerous!';
+        }
+    }
+
+    public function duplicate1() {
+        echo "Duplicate me!";
+    }
+    
+    public function duplicate2() {
+        echo "Duplicate me!";
+    }
+    public function duplicate3() {
+        echo "Duplicate me!";
+    }
 }
