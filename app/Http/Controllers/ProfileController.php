@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\ProfileRequest;
-use App\Models\User;
 use App\Services\ProfileService;
 use Exception;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 
 class ProfileController extends Controller
 {
@@ -25,7 +21,6 @@ class ProfileController extends Controller
     public function profile()
     {
         try {
-           
             $user = $this->profileService->profile();
             return response()->json(['data' => $user], 200);
         } catch (Exception $e) {
@@ -48,5 +43,51 @@ class ProfileController extends Controller
             return response()->json(['message' => $e->getMessage()], 500);
         }
     }
+
+    public function myTesting(){
+        if (true) {
+            if (true) {
+                if (true) {
+                    echo "This is bad";
+                }
+            }
+        }
+    }
+
+    public function duplicate1() {
+        echo "Duplicate me!";
+    }
     
+    public function duplicate2() {
+        echo "Duplicate me!";
+    }
+    
+    public function complexFunction() {
+        if (true) {
+            if (true) {
+                for ($i = 0; $i < 10; $i++) {
+                    while (true) {
+                        switch ($i) {
+                            case 1:
+                                echo "Nested nightmare!";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public function badPractice() {
+        try {
+            throw new \Exception("Oops");
+        } catch (\Exception $e) {
+            // Nothing here
+        }
+        if (1 == 1) {
+            echo 'Do something dangerous!';
+        }
+    }
 }
